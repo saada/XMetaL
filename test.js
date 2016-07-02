@@ -11,4 +11,5 @@ const nestedDivs = require('./components/nestedDivs')
 
 const {render} = require('./Component')
 let l = console.log
-l(render(nestedDivs()))
+l(render(nestedDivs({name: 'Hooda'}, [nestedDivs({name: 'okay'})])))
+// l(render(h1({}, 'awesome')))
