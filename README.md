@@ -42,8 +42,9 @@ const div = (props, children) => {
 
 Components are composable
 ```js
-const NestedDivs = () => {
-  div({name: 'saada'}, [
+// MyComponent.js
+module.exports = () => {
+  div({class: 'saada'}, [
     h1({}, 'Text1'),
     div({}, [
       h2({}, 'Text2')
@@ -52,4 +53,32 @@ const NestedDivs = () => {
 }
 ```
 
-By convention, it's recommended to use CapitalizedCamelCasing when writing your own components.
+You can render your component by calling
+```js
+const {render} = require('Component')
+const MyComponent = require('./MyComponent')
+
+render(MyComponent())
+```
+Output
+```html
+<div class="saada">
+  <h1>Text1</h1>
+  <div>
+    <h2>Text2</h2>
+  </div>
+</div>
+```
+
+Let's add some props to make the text customizable
+```js
+// MyComponent.js
+module.exports = (props = {}) => {
+  div({class: 'saada'}, [
+    h1({}, 'Text1'),
+    div({}, [
+      h2({}, 'Text2')
+    ])
+  ])
+}
+```
