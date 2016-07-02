@@ -45,13 +45,15 @@ const recursiveRender = ({tag, props, children}, depth = 0) => {
   return `${firstEndline}${spacing}<${tag}${renderProps(props)}>${renderedChildren}${lastEndline}</${tag}>`
 }
 
+const createComponent = (tag) => (props = {}, children = []) => {
+  return {
+    tag: tag,
+    props: props,
+    children: children
+  }
+}
+
 module.exports = {
-  createComponent: (tag) => (props = {}, children = []) => {
-    return {
-      tag: tag,
-      props: props,
-      children: children
-    }
-  },
+  createComponent: createComponent,
   render: recursiveRender
 }
