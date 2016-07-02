@@ -1,7 +1,7 @@
 {
   "name": "xmetal",
   "version": "1.0.0",
-  "description": "XML/HTML functional view component library for Javascript",
+  "description": "React-inspired XML/HTML component library for Javascript",
   "main": "xMetal.js",
   "scripts": {
     "test": "node test.js"
