@@ -12,6 +12,10 @@ const recursiveRender = ({tag, props, children}, depth = 0) => {
   for (let i = 0; i < depth; i++) {
     spacing += '  ';
   }
+
+  // every tag except the first one should have an endline in front of it
+  let firstEndline = depth > 0 ? '\n' : ''
+  
   depth++
   
   let renderedChildren = ''
@@ -20,10 +24,13 @@ const recursiveRender = ({tag, props, children}, depth = 0) => {
     case 'undefined':
       break
     case 'string':
-    console.log(children)
       renderedChildren = children
       break
     default:  //object
+      if (!Array.isArray(children)) {
+        var err = new Error();
+        throw `Non-array passed to ${tag} element`
+      }
       renderedChildren = children.map((child) => {
         return recursiveRender(child, depth)
       }).join('')
@@ -34,8 +41,6 @@ const recursiveRender = ({tag, props, children}, depth = 0) => {
   }
 
 
-  // every tag except the first one should have an endline in front of it
-  let firstEndline = depth > 0 ? '\n' : ''
 
   return `${firstEndline}${spacing}<${tag}${renderProps(props)}>${renderedChildren}${lastEndline}</${tag}>`
 }
