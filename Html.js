@@ -1,4 +1,4 @@
-const {createComponent} = require('./Component')
+const {createComponent} = require('./xmetal')
 
 const htmlTags = [
   'a',

@@ -9,7 +9,7 @@ const {h1, div} = require('./Html')
 
 const nestedDivs = require('./components/nestedDivs')
 
-const {render} = require('./Component')
+const {render} = require('./xmetal')
 let l = console.log
 l(render(nestedDivs({name: 'Hooda'}, [nestedDivs({name: 'okay'})])))
 // l(render(h1({}, 'awesome')))

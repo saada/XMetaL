@@ -1,14 +1,22 @@
-# Component.js
+# :metal: xMetal :metal:
 ## XML/HTML functional component library for Javascript
 
-Designed to work with any XML-based markup and can run both in the browser and on Node. It also has no dependencies.
+Designed to work with any XML-based markup and can run both in the browser and on Node.
 
-Component.js is heavily influenced by React and tries to remove a lot of the tooling overhead. 
+xMetal is heavily influenced by React and tries to remove a lot of the tooling overhead. 
 It allows you to get up and running quickly with minimal changes on your end.
+
+### Why another view library?
+* Pure functional Javascript
+* Scalable abstraction
+* No tooling required
+* No dependencies
+* No JSX, while still keeping markup easy to write
+* Works with any XML markup, not just HTML
 
 ### HTML helper
 HTML is probably the most popular XML-based language. 
-Therefore, baked into Component.js is a helper with a list of primitive html components.
+Therefore, baked into xMetal is a helper with a list of primitive html components.
 To use those primitives, simply run
 ```js
 const {h1, h2, div} = require('./Html')
@@ -150,15 +158,10 @@ module.exports = (props) => {
 }
 ```
 
-### Why another view library?
-* Pure functional Javascript
-* Scalable abstraction
-* No tooling required
-* No dependencies
-* No JSX, while still keeping markup easy to write
-
-
 TODO:
 - [ ] Examples with CSS
 - [ ] Examples with browser routing
 - [ ] Examples with async calls
+- [ ] DOM Examples
+- [ ] DOM diffing
+- [ ] Cross browser support

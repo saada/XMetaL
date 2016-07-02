@@ -1,0 +1,25 @@
+{
+  "name": "xmetal",
+  "version": "1.0.0",
+  "description": "XML/HTML functional view component library for Javascript",
+  "main": "xMetal.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saada/XMetaL.git"
+  },
+  "keywords": [
+    "view",
+    "component",
+    "xml",
+    "html"
+  ],
+  "author": "Mahmoud Saada",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saada/XMetaL/issues"
+  },
+  "homepage": "https://github.com/saada/XMetaL#readme"
+}
