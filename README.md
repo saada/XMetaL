@@ -141,7 +141,7 @@ Let's say we wanted to lowercase user first names and uppercase user last names.
 // User.js
 const formatUserName = (user) => {
   user.firstname = user.firstname.toLowerCase()
-  user.lastname = user.firstname.toUpperCase()
+  user.lastname = user.lastname.toUpperCase()
 }
 
 module.exports = (props) => {
@@ -150,7 +150,15 @@ module.exports = (props) => {
 }
 ```
 
+### Why another view library?
+* Pure functional Javascript
+* Scalable abstraction
+* No tooling required
+* No dependencies
+* No JSX, while still keeping markup easy to write
+
 
 TODO:
-- Examples with CSS
-- Examples with 
+- [ ] Examples with CSS
+- [ ] Examples with browser routing
+- [ ] Examples with async calls
