@@ -3,46 +3,10 @@
 
 The library introduces a single class
 
-
-### Syntax 1
-```
-class MyComponent extends Component {
-  render() {
-    return [
-      'a',
-      { href: 'http://google.com' },
-      'text'
-    ]
-  }
-}
-
-let output = Component.recursiveRender(new MyComponent)
-console.log(output)
-// outputs: <h1 class="red">text</h1>
-```
-
-### Syntax 2
-```js
-const MyComponent = () => [
-  'a', {href: 'http://google.com'}, () => [
-  ]
-]
-```
-
-### Syntax 3
-```js
-const div = (props, children) => {
-  tag: 'div', 
-  attrs: props,
-  children: children
-}
-
-// now we can create "div" elements using: div(<{}:props>, <[]:children>)
-```
-
 Components are composable
 ```js
 // MyComponent.js
+const {h1, h2, div} = require('./Html')
 module.exports = () => {
   div({class: 'saada'}, [
     h1({}, 'Text1'),
@@ -73,12 +37,23 @@ Output
 Let's add some props to make the text customizable
 ```js
 // MyComponent.js
-module.exports = (props = {}) => {
-  div({class: 'saada'}, [
-    h1({}, 'Text1'),
+module.exports = (props) => {
+  div({class: props.class}, [
+    h1({}, props.header),
     div({}, [
-      h2({}, 'Text2')
+      h2({}, props.subHeader)
     ])
   ])
 }
+```
+You can render your component by calling
+```js
+const {render} = require('Component')
+const MyComponent = require('./MyComponent')
+
+render(MyComponent({
+  class: 'red', 
+  text1: 'Header', 
+  text2: 'Subheader'
+}))
 ```
