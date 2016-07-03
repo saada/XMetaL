@@ -1,9 +1,9 @@
-# :metal: xMetal :metal:
+# :metal: XMetaL :metal:
 ## XML/HTML functional component library for Javascript
 
 Designed to work with any XML-based markup and can run both in the browser and on Node.
 
-xMetal is heavily influenced by React and tries to remove a lot of the tooling overhead. 
+XMetaL is heavily influenced by React and tries to remove a lot of the tooling overhead. 
 It allows you to get up and running quickly with minimal changes on your end.
 
 ### Why another view library?
@@ -17,7 +17,7 @@ It allows you to get up and running quickly with minimal changes on your end.
 
 ### HTML helper
 HTML is probably the most popular XML-based language. 
-Therefore, baked into xMetal is a helper with a list of primitive html components.
+Therefore, baked into XMetaL is a helper with a list of primitive html components.
 To use those primitives, simply run
 ```js
 const {h1, h2, div} = require('./Html')
