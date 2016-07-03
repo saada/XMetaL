@@ -1,8 +1,8 @@
 {
   "name": "xmetal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React-inspired XML/HTML component library for Javascript",
-  "main": "xMetal.js",
+  "main": "XMetaL.js",
   "scripts": {
     "test": "node test.js"
   },
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/saada/XMetaL/issues"
   },
-  "homepage": "https://github.com/saada/XMetaL#readme"
+  "homepage": "https://github.com/saada/XMetaL#readme",
+  "dependencies": {
+    "webpack": "^1.13.1"
+  }
 }
