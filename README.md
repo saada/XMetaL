@@ -12,7 +12,8 @@ It allows you to get up and running quickly with minimal changes on your end.
 * No tooling required
 * No dependencies
 * No JSX, while still keeping markup easy to write
-* Works with any XML markup, not just HTML
+* Can work with any XML markup, not just HTML
+* Server-side rendering just works
 
 ### HTML helper
 HTML is probably the most popular XML-based language. 
@@ -24,7 +25,7 @@ const {h1, h2, div} = require('./Html')
 Behind the scenes, the HTML helpers creates components using the `createComponent` function.
 You can create your own primitives based on the XML language in your domain.
 ```js
-const { createComponent } = require('Component')
+const { createComponent } = require('xmetal')
 const div = createComponent('div')
 ```
 ### Writing a component
@@ -54,7 +55,7 @@ module.exports = () =>
 
 You can render your component by calling
 ```js
-const {render} = require('Component')
+const {render} = require('xmetal')
 const MyComponent = require('./MyComponent')
 
 const output = render(MyComponent())
@@ -87,7 +88,7 @@ module.exports = (props) =>
 ```
 Let's call render
 ```js
-const {render} = require('Component')
+const {render} = require('xmetal')
 const MyComponent = require('./MyComponent')
 
 const output = render(MyComponent({
@@ -127,7 +128,7 @@ const users = [
   { firstname: 'Michael', lastname: 'Jackson' }
 ]
 
-const {render} = require('Component')
+const {render} = require('xmetal')
 const UserList = require('./UserList')
 const User = require('./User')
 
