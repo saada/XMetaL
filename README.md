@@ -93,8 +93,8 @@ const MyComponent = require('./MyComponent')
 
 const output = render(MyComponent({
   class: 'red', 
-  text1: 'Header', 
-  text2: 'Subheader'
+  header: 'Header', 
+  subHeader: 'Subheader'
 }))
 console.log(output)
 ```
